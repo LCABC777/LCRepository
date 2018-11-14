@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#showdiv{
+				border: solid 1px;
+				height: 220px;
+				width: 200px;
+				margin: auto;
+			}
+			.btn{
+				margin-top: 10px;
+				margin-left: 7px;
+				margin-right: 7px;
+				height: 30px;
+				width:30px;
+				font-size: 15px;
+			}
+			#text{
+				margin-top: 20px;
+				margin-left: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+		 function calculator(value){
+		 	var num=value.value;
+		 	switch (num){
+		 		case "=":
+		 			document.getElementById("text").value=eval(document.getElementById("text").value);
+		 			break;
+	 			case "c":
+	 				document.getElementById("text").value="";
+	 				break;
+		 		default:
+		 			document.getElementById("text").value=document.getElementById("text").value+num
+		 			break;
+		 	}
+		 }
+		</script>
+		
+	</head>
+	<body>
+		<div id="showdiv">
+			<input type="text" id="text" readonly="readonly"/><br />
+			<input type="button" class="btn" value="0" onclick="calculator(this)"/>
+			<input type="button" class="btn" value="1" onclick="calculator(this)"/>
+			<input type="button" class="btn" value="2" onclick="calculator(this)"/>
+			<input type="button" class="btn" value="3" onclick="calculator(this)"/><br />
+			<input type="button" class="btn" value="4" onclick="calculator(this)"/>
+			<input type="button" class="btn" value="5" onclick="calculator(this)"/>
+			<input type="button" class="btn" value="6" onclick="calculator(this)"/>
+			<input type="button" class="btn" value="7" onclick="calculator(this)"/><br />
+			<input type="button" class="btn" value="8" onclick="calculator(this)"/>
+			<input type="button" class="btn" value="9" onclick="calculator(this)"/>
+			<input type="button" class="btn" value="+" onclick="calculator(this)"/>
+			<input type="button" class="btn" value="-" onclick="calculator(this)"/><br />
+			<input type="button" class="btn" value="*" onclick="calculator(this)"/>
+			<input type="button" class="btn" value="/" onclick="calculator(this)"/>
+			<input type="button" class="btn" value="=" onclick="calculator(this)"/>
+			<input type="button" class="btn" value="c" onclick="calculator(this)"/>
+
+		</div>
+		
+	</body>
+</html>

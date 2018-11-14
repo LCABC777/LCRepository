@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1px">
+		<tr>
+			<td>name</td>
+			<td>pwd</td>
+		</tr>
+		<tr th:each="user:${lu}">
+			<td th:text="${user.name}"></td>
+			<td th:text="${user.pwd}"></td>
+		</tr>
+	</table>
+	<form action="user">
+		<input type="text" name="name"/>name
+		<input type="password" name="pwd"/>pwd
+		<button type="submit">提交</button>
+	</form>
+</body>
+</html>
